@@ -226,6 +226,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "24e649c77cf0443790027d5c4ec6ec8c",
+    "m_Id": 1,
+    "m_DisplayName": "Out",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "33087e15a2a24171af4c6982fbfdcaa3",
     "m_Name": "",
@@ -277,7 +292,7 @@
     },
     "m_Slots": [
         {
-            "m_Id": "8fa19cd8195b4b73997e270a5a08ea70"
+            "m_Id": "24e649c77cf0443790027d5c4ec6ec8c"
         }
     ],
     "synonyms": [],
@@ -385,21 +400,6 @@
         "x": 0.0,
         "y": 0.0
     },
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "8fa19cd8195b4b73997e270a5a08ea70",
-    "m_Id": 1,
-    "m_DisplayName": "Edges",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Edges",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
     "m_Labels": []
 }
 

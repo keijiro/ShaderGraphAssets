@@ -150,7 +150,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "UV Grid",
+    "m_Name": "UV Grid Line",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -451,10 +451,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "c6207fac5e5f4a88bc21a1aa09d0cd4e",
     "m_Id": 1,
-    "m_DisplayName": "Edges",
+    "m_DisplayName": "Out",
     "m_SlotType": 1,
     "m_Hidden": false,
-    "m_ShaderOutputName": "Edges",
+    "m_ShaderOutputName": "Out",
     "m_StageCapability": 3,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
