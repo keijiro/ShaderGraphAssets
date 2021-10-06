@@ -68,6 +68,14 @@
       "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
+    "jp.keijiro.shadergraphassets": {
+      "version": "file:jp.keijiro.shadergraphassets",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.shadergraph": "10.0.0"
+      }
+    },
     "com.unity.modules.imgui": {
       "version": "1.0.0",
       "depth": 3,

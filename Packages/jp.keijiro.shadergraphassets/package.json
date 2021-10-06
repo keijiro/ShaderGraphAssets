@@ -1,0 +1,12 @@
+{
+  "author": "Keijiro Takahashi",
+  "dependencies": { "com.unity.shadergraph": "10.0.0" },
+  "description": "Keijiro's basic asset collection for Shader Graph",
+  "displayName": "Shader Graph Assets",
+  "keywords": [ "unity" ],
+  "license": "Unlicense",
+  "name": "jp.keijiro.shadergraphassets",
+  "unity": "2020.2",
+  "unityRelease": "0f1",
+  "version": "1.0.0"
+}
