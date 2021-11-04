@@ -11,6 +11,9 @@
         },
         {
             "m_Id": "7711124d8a69456599c470ce87615a49"
+        },
+        {
+            "m_Id": "730c7a766c374f0ca6903f093fccff97"
         }
     ],
     "m_Keywords": [],
@@ -62,11 +65,28 @@
         },
         {
             "m_Id": "191230f58f5549df80735f4b0de104b4"
+        },
+        {
+            "m_Id": "088d400e2f1642cd8aefbf03981afbdd"
         }
     ],
     "m_GroupDatas": [],
     "m_StickyNoteDatas": [],
     "m_Edges": [
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "088d400e2f1642cd8aefbf03981afbdd"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "61c8343ab13848d78a9fd0211f6f00a6"
+                },
+                "m_SlotId": 0
+            }
+        },
         {
             "m_OutputSlot": {
                 "m_Node": {
@@ -356,6 +376,41 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "088d400e2f1642cd8aefbf03981afbdd",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -1286.0,
+            "y": 104.00001525878906,
+            "width": 92.6666259765625,
+            "height": 34.000030517578128
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "fcf8c3d48cd94c36bff70725b3641dbf"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "730c7a766c374f0ca6903f093fccff97"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "0b0913213e7b4f6fb1df53ddc2314a9f",
     "m_Group": {
@@ -513,10 +568,10 @@
         "m_Expanded": false,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1294.66650390625,
-            "y": 86.66667938232422,
-            "width": 127.9998779296875,
-            "height": 76.66666412353516
+            "x": -1321.3333740234375,
+            "y": 138.0000457763672,
+            "width": 127.3333740234375,
+            "height": 77.33331298828125
         }
     },
     "m_Slots": [
@@ -605,10 +660,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -582.666748046875,
-            "y": 191.9999542236328,
-            "width": 278.666748046875,
-            "height": 166.0000457763672
+            "x": -581.3333740234375,
+            "y": 193.3333740234375,
+            "width": 290.0,
+            "height": 165.99990844726563
         }
     },
     "m_Slots": [
@@ -641,7 +696,7 @@
     "m_SourceType": 1,
     "m_FunctionName": "FloatToLabel_TileSelect",
     "m_FunctionSource": "",
-    "m_FunctionBody": "bool negative = Value < 0;\nValue = abs(Value);\n\nfloat position = Width - Position - Precision - (Precision > 0 ? 2 : 1);\nbool separator = position == -1;\nposition += position < 0;\n\nfloat divider = pow(10, position);\nfloat digit = floor((Value / divider ) % 10);\n\n// Left blank\nTile = 15;\n\n// Sign\nTile = negative && (divider < Value * 10 || position == 1) ? 12: Tile;\n\n// Digit\nTile = divider <= Value || position <= 0 ? digit : Tile;\n\n// Separator (decimal point)\nTile = separator ? 10 : Tile;\n"
+    "m_FunctionBody": "int position = Width - Position - Precision - (Precision > 0);\nbool separator = position == 0;\nposition += position < 0;\n\nbool negative = Value < 0;\nint value = round(abs(Value) * pow(10, Precision));\nint divider = round(pow(10, position + Precision - 1));\nint digit = value / divider  % 10;\n\n// Left blank\nTile = 15;\n\n// Sign\nTile = negative && (value * 10 / divider > 0 || position == 2) ? 12: Tile;\n\n// Digit\nTile = (value >= divider || position < 2) ? digit : Tile;\n\n// Separator (decimal point)\nTile = separator ? 10 : Tile;\n"
 }
 
 {
@@ -845,7 +900,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": -99.9000015258789,
+    "m_Value": -123.44999694824219,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -915,10 +970,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -648.666748046875,
-            "y": -7.333329677581787,
-            "width": 131.33343505859376,
-            "height": 93.99996185302735
+            "x": -648.0000610351563,
+            "y": 10.000004768371582,
+            "width": 130.66668701171876,
+            "height": 93.99999237060547
         }
     },
     "m_Slots": [
@@ -1066,6 +1121,33 @@
         "w": 0.0
     },
     "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector2ShaderProperty",
+    "m_ObjectId": "730c7a766c374f0ca6903f093fccff97",
+    "m_Guid": {
+        "m_GuidSerialized": "62fc61e7-5cab-4b55-b26a-9006c07626ea"
+    },
+    "m_Name": "UV",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "UV",
+    "m_DefaultReferenceName": "_UV",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 2,
+    "m_Hidden": false,
+    "m_Value": {
         "x": 0.0,
         "y": 0.0,
         "z": 0.0,
@@ -1231,7 +1313,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 6.0,
+    "m_Value": 7.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -1346,10 +1428,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1423.333251953125,
-            "y": 129.33340454101563,
-            "width": 105.333251953125,
-            "height": 33.99993896484375
+            "x": -1450.0,
+            "y": 181.3333282470703,
+            "width": 106.0,
+            "height": 34.000030517578128
         }
     },
     "m_Slots": [
@@ -1532,6 +1614,9 @@
     "m_Name": "",
     "m_ChildObjectList": [
         {
+            "m_Id": "730c7a766c374f0ca6903f093fccff97"
+        },
+        {
             "m_Id": "4551fd3e81c74769b70a5827ef4ee7e6"
         },
         {
@@ -1625,6 +1710,27 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
+    "m_ObjectId": "fcf8c3d48cd94c36bff70725b3641dbf",
+    "m_Id": 0,
+    "m_DisplayName": "UV",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_Labels": []
 }
 
 {
