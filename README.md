@@ -44,7 +44,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "jp.keijiro.shadergraphassets": "1.0.5",
+    "jp.keijiro.shadergraphassets": "1.0.6",
 ...
 ```
 
