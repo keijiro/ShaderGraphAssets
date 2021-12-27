@@ -29,7 +29,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"jp.keijiro.shadergraphassets": "1.0.5"
+"jp.keijiro.shadergraphassets": "1.0.6"
 ```
 
 After changes, the manifest file should look like below:
