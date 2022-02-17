@@ -204,15 +204,21 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 37.0,
-            "y": 39.99993896484375,
+            "x": 63.0,
+            "y": 13.5,
             "width": 208.0,
-            "height": 278.0001220703125
+            "height": 326.0
         }
     },
     "m_Slots": [
         {
             "m_Id": "4cbf479d838a4622a2dd36f3550f72cd"
+        },
+        {
+            "m_Id": "a8c0871660f24eb489675002cccf0290"
+        },
+        {
+            "m_Id": "dc57c2f70aa84184a7a112e9ff3dd642"
         },
         {
             "m_Id": "923257cf64b046738c338856f59e50fd"
@@ -227,10 +233,16 @@
     },
     "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"057a69df2245a45fc82041b1874abbda\",\n        \"type\": 3\n    }\n}",
     "m_PropertyGuids": [
-        "898c4755-4cfc-404a-9488-fdb147d808b1"
+        "898c4755-4cfc-404a-9488-fdb147d808b1",
+        "53d499f5-d827-4a72-a617-b0a54f6e38c4",
+        "a7ade711-f52d-4d33-91be-b720a46dc6b9",
+        "b7cf57be-037c-4076-a9b4-e35322d9cd2a"
     ],
     "m_PropertyIds": [
-        -919381126
+        -919381126,
+        2016294971,
+        1945092361,
+        -1902692023
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -330,6 +342,27 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
+    "m_ObjectId": "a8c0871660f24eb489675002cccf0290",
+    "m_Id": 2016294971,
+    "m_DisplayName": "Resolution",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Resolution",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 1024.0,
+        "y": 512.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
     "m_ObjectId": "bc3ea0b48100488684e73e799abaee7e"
 }
@@ -373,6 +406,21 @@
     "m_ObjectId": "db1882c4f40349858ab22d333d34d4da",
     "m_Name": "",
     "m_ChildObjectList": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "dc57c2f70aa84184a7a112e9ff3dd642",
+    "m_Id": -1902692023,
+    "m_DisplayName": "Line Opacity",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Line_Opacity",
+    "m_StageCapability": 3,
+    "m_Value": 0.5,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
 }
 
 {
