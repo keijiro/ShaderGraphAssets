@@ -6,8 +6,8 @@ Basic asset collection for Unity Shader Graph
 System requirements
 -------------------
 
-- Unity 2020.2 or later
-- HDRP 10.0 or later
+- Unity 2021.2 or later
+- Shader Graph 12.1 or later
 
 How to install the package
 --------------------------
