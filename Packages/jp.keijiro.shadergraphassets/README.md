@@ -6,8 +6,8 @@ Basic asset collection for Unity Shader Graph
 System requirements
 -------------------
 
-- Unity 2020.2 or later
-- HDRP 10.0 or later
+- Unity 2021.2 or later
+- Shader Graph 12.1 or later
 
 How to install the package
 --------------------------
@@ -29,7 +29,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"jp.keijiro.shadergraphassets": "1.0.10"
+"jp.keijiro.shadergraphassets": "2.0.0"
 ```
 
 After changes, the manifest file should look like below:
@@ -44,7 +44,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "jp.keijiro.shadergraphassets": "1.0.10",
+    "jp.keijiro.shadergraphassets": "2.0.0",
 ...
 ```
 
