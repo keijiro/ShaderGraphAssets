@@ -59,6 +59,9 @@
         },
         {
             "m_Id": "9cec4d469c754895a310bf0b7816b4d2"
+        },
+        {
+            "m_Id": "2d86d0a1dece43eeb4d3c4f58f820cac"
         }
     ],
     "m_GroupDatas": [],
@@ -76,6 +79,20 @@
                     "m_Id": "c7461c526b39491aac0ea7b7f5f05c53"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "2d86d0a1dece43eeb4d3c4f58f820cac"
+                },
+                "m_SlotId": 1
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "5daf9568ec46400a9e2bd7ab35859a88"
+                },
+                "m_SlotId": 1
             }
         },
         {
@@ -269,9 +286,9 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "5daf9568ec46400a9e2bd7ab35859a88"
+                    "m_Id": "2d86d0a1dece43eeb4d3c4f58f820cac"
                 },
-                "m_SlotId": 1
+                "m_SlotId": -580542324
             }
         },
         {
@@ -359,6 +376,31 @@
         "m_Id": "5daf9568ec46400a9e2bd7ab35859a88"
     },
     "m_ActiveTargets": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "0652e844ba654679af96abf438718ba5",
+    "m_Id": 1,
+    "m_DisplayName": "Out",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -586,6 +628,54 @@
         "x": 0.0,
         "y": 1.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
+    "m_ObjectId": "2d86d0a1dece43eeb4d3c4f58f820cac",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "sRGB To Linear If",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 602.5000610351563,
+            "y": -179.50003051757813,
+            "width": 207.99993896484376,
+            "height": 298.5000305175781
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "7897dbb86d82485fb5f7a89673db5f64"
+        },
+        {
+            "m_Id": "0652e844ba654679af96abf438718ba5"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"a6b713f0d548447e2a0103d2047a304a\",\n        \"type\": 3\n    }\n}",
+    "m_PropertyGuids": [
+        "9d2aa2f5-55e6-45f7-bdce-dbc8229963cd"
+    ],
+    "m_PropertyIds": [
+        -580542324
+    ],
+    "m_Dropdowns": [
+        "_Condition"
+    ],
+    "m_DropdownSelectedEntries": [
+        "Linear"
+    ]
 }
 
 {
@@ -850,9 +940,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 693.0,
+            "x": 848.9999389648438,
             "y": -179.5,
-            "width": 85.5001220703125,
+            "width": 85.5,
             "height": 77.0
         }
     },
@@ -973,6 +1063,31 @@
     "m_DefaultValue": {
         "x": 0.0,
         "y": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "7897dbb86d82485fb5f7a89673db5f64",
+    "m_Id": -580542324,
+    "m_DisplayName": "In",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_In",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5,
+        "w": 1.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
     },
     "m_Labels": []
 }
@@ -1408,7 +1523,7 @@
     "m_SourceType": 1,
     "m_FunctionName": "UVChecker_Fill",
     "m_FunctionSource": "",
-    "m_FunctionBody": "float p = frac(dot(floor(UV * Counts) / Counts, 1));\n\nfloat h = lerp(1.6, 0.7, p);\nfloat s = 0.5;\nfloat v = 0.35 + sin(p * PI) * 0.4;\n\nfloat3 rgb = HsvToRgb(float3(h, s, v));\n\nOut = IsGammaSpace() ? rgb : SRGBToLinear(rgb);"
+    "m_FunctionBody": "float p = frac(dot(floor(UV * Counts) / Counts, 1));\n\nfloat h = lerp(1.6, 0.7, p);\nfloat s = 0.5;\nfloat v = 0.35 + sin(p * PI) * 0.4;\n\nOut = HsvToRgb(float3(h, s, v));"
 }
 
 {
@@ -1541,7 +1656,7 @@
         "plus"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
