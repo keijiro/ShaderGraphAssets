@@ -23,8 +23,12 @@ float RadialSpeedlines(float2 UV, float Freq, float2 Thick, float2 Radius)
 void RadialSpeedlines_float
   (float2 UV, float Freq, float2 Thick, float2 Radius, out float Out)
 {
-#ifdef _RADIAL_SPEEDLINES_SUPERSAMPLING
+    Out = RadialSpeedlines(UV, Freq, Thick, Radius);
+}
 
+void RadialSpeedlinesX4_float
+  (float2 UV, float Freq, float2 Thick, float2 Radius, out float Out)
+{
     float2 uvdx = ddx(UV) / 4;
     float2 uvdy = ddy(UV) / 4;
 
@@ -35,10 +39,4 @@ void RadialSpeedlines_float
     acc += RadialSpeedlines(UV - uvdx + uvdy, Freq, Thick, Radius);
     acc += RadialSpeedlines(UV + uvdx + uvdy, Freq, Thick, Radius);
     Out = acc / 6;
-
-#else
-
-    Out = RadialSpeedlines(UV, Freq, Thick, Radius);
-
-#endif
 }
