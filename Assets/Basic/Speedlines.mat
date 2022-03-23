@@ -36,7 +36,7 @@ Material:
     - _Frequency: 200
     - _Inner: 0.4
     - _InnerRadius: 0.27
-    - _InnerRandom: 0.2
+    - _InnerRandom: 0.4
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RADIAL_SPEEDLINES_SUPERSAMPLING: 1

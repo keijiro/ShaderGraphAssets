@@ -1,4 +1,5 @@
-float RadialSpeedlines(float2 UV, float Freq, float2 Thick, float2 Radius)
+float RadialSpeedlines
+  (float2 UV, float Freq, float2 Thick, float2 Radius, float Seed)
 {
     float2 npos = (UV - 0.5) / sqrt(0.5);
 
@@ -6,7 +7,7 @@ float RadialSpeedlines(float2 UV, float Freq, float2 Thick, float2 Radius)
     polar.x = (atan2(npos.x, npos.y) / PI + 1) / 2;
     polar.y = length(npos);
 
-    uint seed = (uint)(polar.x * Freq) * 4;
+    uint seed = (uint)((polar.x + Seed) * Freq) * 4;
 
     float param = frac(polar.x * Freq) * 2 - 1;
 
@@ -21,22 +22,22 @@ float RadialSpeedlines(float2 UV, float Freq, float2 Thick, float2 Radius)
 }
 
 void RadialSpeedlines_float
-  (float2 UV, float Freq, float2 Thick, float2 Radius, out float Out)
+  (float2 UV, float Freq, float2 Thick, float2 Radius, float Seed, out float Out)
 {
-    Out = RadialSpeedlines(UV, Freq, Thick, Radius);
+    Out = RadialSpeedlines(UV, Freq, Thick, Radius, Seed);
 }
 
 void RadialSpeedlinesX4_float
-  (float2 UV, float Freq, float2 Thick, float2 Radius, out float Out)
+  (float2 UV, float Freq, float2 Thick, float2 Radius, float Seed, out float Out)
 {
     float2 uvdx = ddx(UV) / 4;
     float2 uvdy = ddy(UV) / 4;
 
     float acc = 0;
-    acc += RadialSpeedlines(UV              , Freq, Thick, Radius) * 2;
-    acc += RadialSpeedlines(UV - uvdx - uvdy, Freq, Thick, Radius);
-    acc += RadialSpeedlines(UV + uvdx - uvdy, Freq, Thick, Radius);
-    acc += RadialSpeedlines(UV - uvdx + uvdy, Freq, Thick, Radius);
-    acc += RadialSpeedlines(UV + uvdx + uvdy, Freq, Thick, Radius);
+    acc += RadialSpeedlines(UV              , Freq, Thick, Radius, Seed) * 2;
+    acc += RadialSpeedlines(UV - uvdx - uvdy, Freq, Thick, Radius, Seed);
+    acc += RadialSpeedlines(UV + uvdx - uvdy, Freq, Thick, Radius, Seed);
+    acc += RadialSpeedlines(UV - uvdx + uvdy, Freq, Thick, Radius, Seed);
+    acc += RadialSpeedlines(UV + uvdx + uvdy, Freq, Thick, Radius, Seed);
     Out = acc / 6;
 }
