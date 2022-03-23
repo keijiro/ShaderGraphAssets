@@ -7,6 +7,6 @@
     }
   ],
   "dependencies": {
-    "com.unity.render-pipelines.universal": "12.1.5"
+    "com.unity.render-pipelines.universal": "12.1.6"
   }
 }
