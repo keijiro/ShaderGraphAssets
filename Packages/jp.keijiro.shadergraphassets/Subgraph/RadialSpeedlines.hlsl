@@ -18,7 +18,7 @@ float RadialSpeedlines
     width *= (polar.y - radius) / (1.001 - radius);
     width *= width <= 0 ? 100 : 1;
 
-    return saturate((abs(param + offs) - width) * 1000 / Freq / polar.y);
+    return 1 - saturate((abs(param + offs) - width) * 1000 / Freq / polar.y);
 }
 
 void RadialSpeedlines_float
