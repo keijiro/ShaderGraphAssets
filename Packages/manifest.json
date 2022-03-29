@@ -7,6 +7,7 @@
     }
   ],
   "dependencies": {
+    "jp.keijiro.klak.cosinegradient": "1.0.1",
     "com.unity.render-pipelines.universal": "12.1.6"
   }
 }
