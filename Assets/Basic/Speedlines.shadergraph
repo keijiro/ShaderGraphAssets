@@ -175,6 +175,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "d9b7da70c48e4fe78f097ee009a1949a"
+                },
+                "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ca00a13552654bfd9e3a01036117ebd1"
+                },
+                "m_SlotId": -670865588
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "e9c8df4b7798439c9372dd687b539c32"
                 },
                 "m_SlotId": 0
@@ -350,11 +364,11 @@
     "m_Guid": {
         "m_GuidSerialized": "d650287f-c93a-4eb9-b0a6-e16d5531eb4f"
     },
-    "m_Name": "Random (T)",
+    "m_Name": "Random Bias",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Random (T)",
-    "m_DefaultReferenceName": "_Random_T",
-    "m_OverrideReferenceName": "_ThicknessRandom",
+    "m_RefNameGeneratedByDisplayName": "Random Bias",
+    "m_DefaultReferenceName": "_Random_Bias",
+    "m_OverrideReferenceName": "_RandomBias",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -362,7 +376,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 0.6000000238418579,
     "m_FloatType": 1,
     "m_RangeValues": {
         "x": 0.0,
@@ -596,10 +610,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "595b19df15a64c20a118e3809cbdbc21",
     "m_Id": -1012764677,
-    "m_DisplayName": "I R Random",
+    "m_DisplayName": "Random Offset",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_I_R_Random",
+    "m_ShaderOutputName": "_Random_Offset",
     "m_StageCapability": 3,
     "m_Value": 0.20000000298023225,
     "m_DefaultValue": 0.0,
@@ -643,11 +657,11 @@
     "m_Guid": {
         "m_GuidSerialized": "1231e7a9-7fbc-4d43-8909-2595438e1c7f"
     },
-    "m_Name": "Random (IR)",
+    "m_Name": "Random Offset",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Random (IR)",
-    "m_DefaultReferenceName": "_Random_IR",
-    "m_OverrideReferenceName": "_InnerRandom",
+    "m_RefNameGeneratedByDisplayName": "Random Offset",
+    "m_DefaultReferenceName": "_Random_Offset",
+    "m_OverrideReferenceName": "_RandomOffset",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -845,10 +859,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "a04ffa51bdbe42309728e6a37bb0e413",
     "m_Id": -1669788449,
-    "m_DisplayName": "T Random",
+    "m_DisplayName": "Random Bias",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_T_Random",
+    "m_ShaderOutputName": "_Random_Bias",
     "m_StageCapability": 3,
     "m_Value": 1.0,
     "m_DefaultValue": 0.0,
@@ -956,7 +970,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "abddfdbad8b64151995abbcc710dc31d",
     "m_Id": 0,
-    "m_DisplayName": "Random (IR)",
+    "m_DisplayName": "Random Offset",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1274,7 +1288,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "d2afe8d8c0ec437fb95003e96fcaa531",
     "m_Id": 0,
-    "m_DisplayName": "Random (T)",
+    "m_DisplayName": "Random Bias",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

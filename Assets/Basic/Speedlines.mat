@@ -34,17 +34,19 @@ Material:
     m_Ints: []
     m_Floats:
     - _Frequency: 200
-    - _Inner: 0.4
+    - _Inner: 0.3
     - _InnerRadius: 0.27
-    - _InnerRandom: 0.4
+    - _InnerRandom: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RADIAL_SPEEDLINES_SUPERSAMPLING: 1
     - _Radius_Distribution: 0.2
+    - _RandomBias: 0.6
+    - _RandomOffset: 0.2
     - _STREAKLINES_ANTIALIASING: 1
     - _STREAKLINES_SUPERSAMPLING: 1
     - _Thickness: 1
-    - _ThicknessRandom: 1
+    - _ThicknessRandom: 0.6
     - _Thickness_Distribution: 0
     m_Colors: []
   m_BuildTextureStacks: []
