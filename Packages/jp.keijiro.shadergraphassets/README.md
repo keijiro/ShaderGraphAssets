@@ -6,46 +6,25 @@ Basic asset collection for Unity Shader Graph
 System requirements
 -------------------
 
-- Unity 2021.2 or later
+- Unity 2021.3 or later
 - Shader Graph 12.1 or later
 
-How to install the package
---------------------------
+How to Install
+--------------
 
-This package uses the [scoped registry] feature to import dependent packages.
-Please add the following sections to the package manifest file
-(`Packages/manifest.json`).
+This package uses the [scoped registry] feature to resolve package
+dependencies. Open the Package Manager page in the Project Settings window and
+add the following entry to the Scoped Registries list:
 
-To the `scopedRegistries` section:
+- Name: `Keijiro`
+- URL: `https://registry.npmjs.com`
+- Scope: `jp.keijiro`
 
-```
-{
-  "name": "Keijiro",
-  "url": "https://registry.npmjs.com",
-  "scopes": [ "jp.keijiro" ]
-}
-```
+![Scoped Registry](https://user-images.githubusercontent.com/343936/162576797-ae39ee00-cb40-4312-aacd-3247077e7fa1.png)
 
-To the `dependencies` section:
+Now you can install the package from My Registries page in the Package Manager
+window.
 
-```
-"jp.keijiro.shadergraphassets": "2.5.0"
-```
-
-After changes, the manifest file should look like below:
-
-```
-{
-  "scopedRegistries": [
-    {
-      "name": "Keijiro",
-      "url": "https://registry.npmjs.com",
-      "scopes": [ "jp.keijiro" ]
-    }
-  ],
-  "dependencies": {
-    "jp.keijiro.shadergraphassets": "2.5.0",
-...
-```
+![My Registries](https://user-images.githubusercontent.com/343936/162576825-4a9a443d-62f9-48d3-8a82-a3e80b486f04.png)
 
 [scoped registry]: https://docs.unity3d.com/Manual/upm-scoped.html

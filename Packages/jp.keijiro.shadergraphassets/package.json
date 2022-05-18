@@ -9,7 +9,7 @@
   "keywords": [ "unity" ],
   "license": "Unlicense",
   "name": "jp.keijiro.shadergraphassets",
-  "unity": "2021.2",
+  "unity": "2021.3",
   "unityRelease": "0f1",
-  "version": "2.5.0"
+  "version": "2.5.1"
 }
