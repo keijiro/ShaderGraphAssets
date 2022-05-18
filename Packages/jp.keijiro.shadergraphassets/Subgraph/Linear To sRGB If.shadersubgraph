@@ -318,14 +318,14 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "SelectOnLinear (Custom Function)",
+    "m_Name": "L2S_SelectOnLinear (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -254.50006103515626,
-            "y": 369.00006103515627,
-            "width": 241.50006103515626,
+            "x": -254.5,
+            "y": 369.0,
+            "width": 241.49993896484376,
             "height": 118.0
         }
     },
@@ -351,7 +351,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 1,
-    "m_FunctionName": "SelectOnLinear",
+    "m_FunctionName": "L2S_SelectOnLinear",
     "m_FunctionSource": "",
     "m_FunctionBody": "#ifndef UNITY_COLORSPACE_GAMMA\nOut = sRGB;\n#else\nOut = Linear;\n#endif"
 }
@@ -662,7 +662,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "SelectOnGamma (Custom Function)",
+    "m_Name": "L2S_SelectOnGamma (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -695,7 +695,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 1,
-    "m_FunctionName": "SelectOnGamma",
+    "m_FunctionName": "L2S_SelectOnGamma",
     "m_FunctionSource": "",
     "m_FunctionBody": "#ifdef UNITY_COLORSPACE_GAMMA\nOut = sRGB;\n#else\nOut = Linear;\n#endif"
 }

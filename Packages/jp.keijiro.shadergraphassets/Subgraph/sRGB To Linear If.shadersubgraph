@@ -318,7 +318,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "SelectOnLinear (Custom Function)",
+    "m_Name": "S2L_SelectOnLinear (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -351,7 +351,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 1,
-    "m_FunctionName": "SelectOnLinear",
+    "m_FunctionName": "S2L_SelectOnLinear",
     "m_FunctionSource": "",
     "m_FunctionBody": "#ifndef UNITY_COLORSPACE_GAMMA\nOut = Linear;\n#else\nOut = sRGB;\n#endif"
 }
@@ -639,7 +639,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "SelectOnGamma (Custom Function)",
+    "m_Name": "S2L_SelectOnGamma (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -672,7 +672,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 1,
-    "m_FunctionName": "SelectOnGamma",
+    "m_FunctionName": "S2L_SelectOnGamma",
     "m_FunctionSource": "",
     "m_FunctionBody": "#ifdef UNITY_COLORSPACE_GAMMA\nOut = Linear;\n#else\nOut = sRGB;\n#endif"
 }
