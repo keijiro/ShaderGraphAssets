@@ -151,7 +151,7 @@
             "m_Id": "d8c841b6b0c649eaad124064233cae56"
         },
         {
-            "m_Id": "85bf3ad3150c4f838caf72925368e6b6"
+            "m_Id": "90d46cd8635042e29c6c95a2b0272e08"
         }
     ],
     "synonyms": [],
@@ -208,8 +208,8 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
-    "m_ObjectId": "85bf3ad3150c4f838caf72925368e6b6",
+    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
+    "m_ObjectId": "90d46cd8635042e29c6c95a2b0272e08",
     "m_Id": 2,
     "m_DisplayName": "Gradient",
     "m_SlotType": 0,
@@ -218,13 +218,11 @@
     "m_StageCapability": 3,
     "m_Value": {
         "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
+        "y": 0.0
     },
     "m_DefaultValue": {
         "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
+        "y": 0.0
     },
     "m_Labels": []
 }
