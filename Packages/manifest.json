@@ -9,7 +9,8 @@
     }
   ],
   "dependencies": {
-    "com.unity.render-pipelines.universal": "12.1.8",
-    "jp.keijiro.klak.cosinegradient": "1.0.1"
+    "com.unity.ai.navigation": "1.1.1",
+    "com.unity.render-pipelines.universal": "14.0.7",
+    "jp.keijiro.klak.cosinegradient": "1.1.0"
   }
 }
