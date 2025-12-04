@@ -1,15 +1,17 @@
 {
+  "name": "jp.keijiro.shadergraphassets",
+  "version": "2.5.2",
+  "displayName": "Shader Graph Assets",
+  "description": "Keijiro's basic asset collection for Shader Graph",
+  "unity": "2022.3",
   "author": "Keijiro Takahashi",
   "dependencies": {
     "com.unity.shadergraph": "12.1.0",
-    "jp.keijiro.noiseshader": "2.0.0"
+    "jp.keijiro.noiseshader": "3.0.1"
   },
-  "description": "Keijiro's basic asset collection for Shader Graph",
-  "displayName": "Shader Graph Assets",
-  "keywords": [ "unity" ],
+  "changelogUrl": "https://github.com/keijiro/ShaderGraphAssets/blob/main/CHANGELOG.md",
+  "documentationUrl": "https://github.com/keijiro/ShaderGraphAssets",
+  "licensesUrl": "https://github.com/keijiro/ShaderGraphAssets/blob/main/LICENSE",
   "license": "Unlicense",
-  "name": "jp.keijiro.shadergraphassets",
-  "unity": "2021.3",
-  "unityRelease": "0f1",
-  "version": "2.5.2"
+  "_upm": { "changelog": "" }
 }
