@@ -1,6 +1,6 @@
 {
   "name": "jp.keijiro.shadergraphassets",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "displayName": "Shader Graph Assets",
   "description": "Keijiro's basic asset collection for Shader Graph",
   "unity": "2022.3",
@@ -13,5 +13,7 @@
   "documentationUrl": "https://github.com/keijiro/ShaderGraphAssets",
   "licensesUrl": "https://github.com/keijiro/ShaderGraphAssets/blob/main/LICENSE",
   "license": "Unlicense",
-  "_upm": { "changelog": "" }
+  "_upm": {
+    "changelog": "<b>Added</b><br>- Added signing for Unity 6.3."
+  }
 }
